@@ -17,3 +17,24 @@ class complex{
     friend complex operator* (complex,complex);
 
 };
+
+complex operator+ (complex c1,complex c2){
+    complex temp;
+    temp.real = c1.real + c2.real;
+    temp.img = c1.img + c2.img;
+    return(temp);
+}
+
+complex operator- (complex c1,complex c2){
+    complex temp;
+    temp.real = c1.real - c2.real;
+    temp.img = c1.img - c2.img;
+    return(temp);
+}
+
+complex operator* (complex c1,complex c2){
+    complex temp;
+    temp.real = c1.real * c2.real - c1.img*c2.img;
+    temp.img = c1.img + c2.img + c2.real*c1.img;
+    return(temp);
+}
